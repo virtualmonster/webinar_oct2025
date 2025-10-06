@@ -1,0 +1,21 @@
+note: Generated from recorded traffic using edge 141.0.3537.57
+configuration:
+  dataset: Modules/Login Data.csv
+  profile: edge
+  vars:
+    Email_Address:
+      expr: Email_Address
+      type: column
+    Password:
+      expr: Password
+      type: column
+    CVV_Code: '123'
+    APP_Emerald_URL: https://commerce-preview.sbx0032.play.hclsofy.com/Emerald/
+steps:
+  - open:
+      note: Open app1
+      url: '${APP_Emerald_URL}'
+  - run: Modules/Login.dtx.yaml
+  - run: Modules/Add To Cart.dtx.yaml
+  - run: Modules/Checkout Cart.dtx.yaml
+  - run: Modules/Sign Out.dtx.yaml

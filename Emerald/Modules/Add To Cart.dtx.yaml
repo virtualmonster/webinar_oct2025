@@ -1,0 +1,47 @@
+note: Extracted from BuySomething.dtx.yaml
+configuration: {}
+steps:
+  - with:
+      note: Welcome to Emerald
+      steps:
+        - click:
+            shot: ../Welcome to Emerald_aacg5e.dti.jpeg#192
+            object: html.p
+            identifiers:
+              - properties:
+                  - data-testid:
+                      - val: menubar-menuitem-button
+        - click:
+            shot: ../Welcome to Emerald_2ouxnm.dti.jpeg#495
+            object: html.p
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Cabinets
+  - with:
+      note: Cabinets | Emerald
+      steps:
+        - click:
+            shot: ../Cabinets _ Emerald_r2wzcq.dti.jpeg#1068
+            object: html.p
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Grey Solid Cabinet
+  - with:
+      note: Grey Solid Cabinet | Emerald
+      steps:
+        - click:
+            shot: ../Grey Solid Cabinet _ Emerald_orenvj.dti.jpeg#1970
+            object: html.button
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Add to Cart
+        - click:
+            shot: ../Grey Solid Cabinet _ Emerald_utefqp.dti.jpeg#2145
+            object: html.button
+            identifiers:
+              - properties:
+                  - content:
+                      - val: View Full Cart

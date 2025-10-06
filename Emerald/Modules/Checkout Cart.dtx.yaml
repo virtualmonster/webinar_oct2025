@@ -1,0 +1,91 @@
+note: Extracted from BuySomething.dtx.yaml
+configuration:
+  vars:
+    CVV_Code: '123'
+steps:
+  - with:
+      note: Grey Solid Cabinet | Emerald
+      steps:
+        - click:
+            shot: ../Grey Solid Cabinet _ Emerald_utefqp.dti.jpeg#2145
+            object: html.svg
+            identifiers:
+              - properties:
+                  - data-testid:
+                      - val: ShoppingCartIcon
+        - click:
+            shot: ../Grey Solid Cabinet _ Emerald_utefqp.dti.jpeg#2145
+            object: html.button
+            identifiers:
+              - properties:
+                  - content:
+                      - val: View Full Cart
+  - with:
+      note: Emerald
+      steps:
+        - select:
+            shot: ../Emerald_uibalo.dti.jpeg#2528
+            object: html.select
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Select an existing checkout profile
+            value: Account1
+        - click:
+            shot: ../Emerald_33gvam.dti.jpeg#2967
+            object: html.button
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Checkout With Profile
+  - with:
+      note: Emerald
+      steps:
+        - click:
+            shot: ../Emerald_scxt55.dti.jpeg#3418
+            object: html.inputpassword
+            identifiers:
+              - properties:
+                  - label:
+                      - val: CVV Code *
+        - type:
+            shot: ../Emerald_n75aqa.dti.jpeg#3853
+            object: html.inputpassword
+            identifiers:
+              - properties:
+                  - label:
+                      - val: CVV Code *
+            value: '${CVV_Code}'
+        - click:
+            shot: ../Emerald_srxvz2.dti.jpeg#5227
+            object: html.button
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Place Order
+  - with:
+      note: Emerald
+      steps:
+        - verify:
+            shot: ../Emerald_xp66vj.dti.jpeg#5342
+            object: html.h3
+            identifiers:
+              - properties:
+                  - content:
+                      - val: We've received your order
+            properties:
+              - content:
+                  - val: We've received your order
+        - click:
+            shot: ../Emerald_xp66vj.dti.jpeg#5342
+            object: html.svg
+            identifiers:
+              - properties:
+                  - data-testid:
+                      - val: ExpandMoreIcon
+                locators:
+                  - inside:
+                      object: html.div
+                      properties:
+                        - content:
+                            - val: Your Account

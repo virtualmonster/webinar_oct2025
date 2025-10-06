@@ -1,0 +1,13 @@
+note: Extracted from BuySomething.dtx.yaml
+configuration: {}
+steps:
+  - with:
+      note: Emerald
+      steps:
+        - click:
+            shot: ../Emerald_yvzsg7.dti.jpeg#5686
+            object: html.span
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Sign out

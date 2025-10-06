@@ -1,0 +1,42 @@
+note: Extracted from BuySomething.dtx.yaml
+configuration:
+  vars:
+    Email_Address: demo@hcl.com
+    Password: hcldevops1
+steps:
+  - with:
+      note: Welcome to Emerald
+      steps:
+        - click:
+            shot: ../Welcome to Emerald_natl3c.dti.jpeg#159
+            object: html.p
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Sign In / Register
+  - with:
+      note: Emerald
+      steps:
+        - type:
+            shot: ../Emerald_lfgjiy.dti.jpeg#1002
+            object: html.inputemail
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Email Address *
+            value: '${Email_Address}'
+        - type:
+            shot: ../Emerald_a325em.dti.jpeg#1176
+            object: html.inputpassword
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Password *
+            value: '${Password}'
+        - click:
+            shot: ../Emerald_decezu.dti.jpeg#1531
+            object: html.button
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Sign In
