@@ -16,6 +16,8 @@ steps:
       note: Open app1
       url: '${APP_Emerald_URL}'
   - run: Modules/Login.dtx.yaml
-  - run: Modules/Add To Cart.dtx.yaml
+  - run:
+      url: Modules/Add To Cart.dtx.yaml
+      dataset: Modules/Products.csv
   - run: Modules/Checkout Cart.dtx.yaml
   - run: Modules/Sign Out.dtx.yaml

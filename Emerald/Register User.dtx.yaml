@@ -1,0 +1,141 @@
+note: Generated from recorded traffic using edge 141.0.3537.57
+configuration:
+  dataset: Modules/User Data.csv
+  profile: edge
+  vars:
+    APP_Emerald_URL: https://commerce-preview.sbx0032.play.hclsofy.com/Emerald/
+    Email_Address:
+      expr: Email_Address
+      type: column
+    First_Name:
+      expr: First_Name
+      type: column
+    Last_Name:
+      expr: Last_Name
+      type: column
+    Password:
+      expr: Password
+      type: column
+steps:
+  - open:
+      note: Open Emerald
+      url: '${APP_Emerald_URL}'
+  - with:
+      note: Welcome to Emerald
+      steps:
+        - click:
+            shot: Welcome to Emerald_7klzwi.dti.jpeg#44
+            object: html.p
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Sign In / Register
+  - with:
+      note: Emerald
+      steps:
+        - click:
+            shot: Emerald_nadsha.dti.jpeg#400
+            object: html.button
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Register Now
+        - click:
+            shot: Emerald_x2qjtb.dti.jpeg#542
+            object: html.inputemail
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Email Address *
+        - type:
+            shot: Emerald_rj72cv.dti.jpeg#743
+            object: html.inputemail
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Email Address *
+            value: '${Email_Address}'
+        - click:
+            shot: Emerald_hhc3jz.dti.jpeg#1152
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: First Name *
+        - type:
+            shot: Emerald_kbps5b.dti.jpeg#1353
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: First Name *
+            value: '${First_Name}'
+        - click:
+            shot: Emerald_fzh4t3.dti.jpeg#2366
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Last Name *
+        - type:
+            shot: Emerald_653opk.dti.jpeg#2567
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Last Name *
+            value: '${Last_Name}'
+        - click:
+            shot: Emerald_p4ievp.dti.jpeg#2978
+            object: html.inputpassword
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Password *
+        - type:
+            shot: Emerald_ojr5rd.dti.jpeg#3179
+            object: html.inputpassword
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Password *
+            value: '${Password}'
+        - click:
+            shot: Emerald_uvoq6w.dti.jpeg#3589
+            object: html.inputpassword
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Verify Password *
+        - type:
+            shot: Emerald_r74tit.dti.jpeg#3790
+            object: html.inputpassword
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Verify Password *
+            value: '${Password}'
+        - click:
+            shot: Emerald_eqtwb4.dti.jpeg#4222
+            object: html.button
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Complete Registration
+  - with:
+      note: Welcome to Emerald
+      steps:
+        - click:
+            shot: Welcome to Emerald_dqpibu.dti.jpeg#9795
+            object: html.p
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Your Account
+        - click:
+            shot: Welcome to Emerald_2ml3oj.dti.jpeg#10101
+            object: html.span
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Sign out

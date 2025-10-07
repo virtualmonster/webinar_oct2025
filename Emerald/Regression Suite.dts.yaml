@@ -1,0 +1,4 @@
+tests:
+  - url: Register User.dtx.yaml
+    dataset: Modules/User Data.csv
+  - BuySomething.dtx.yaml

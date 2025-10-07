@@ -1,23 +1,28 @@
 note: Extracted from BuySomething.dtx.yaml
-configuration: {}
+configuration:
+  dataset: {}
+  vars:
+    Product_Name: ''
+    Product_Type: ''
 steps:
   - with:
       note: Welcome to Emerald
       steps:
         - click:
             shot: ../Welcome to Emerald_aacg5e.dti.jpeg#192
-            object: html.p
+            object: html.button
             identifiers:
               - properties:
-                  - data-testid:
-                      - val: menubar-menuitem-button
+                  - content:
+                      - val: Kitchen
+        - log: ${Product_Type} + ${Product_Name}
         - click:
             shot: ../Welcome to Emerald_2ouxnm.dti.jpeg#495
             object: html.p
             identifiers:
               - properties:
                   - content:
-                      - val: Cabinets
+                      - val: '${Product_Type}'
   - with:
       note: Cabinets | Emerald
       steps:
@@ -27,7 +32,7 @@ steps:
             identifiers:
               - properties:
                   - content:
-                      - val: Grey Solid Cabinet
+                      - val: '${Product_Name}'
   - with:
       note: Grey Solid Cabinet | Emerald
       steps:
