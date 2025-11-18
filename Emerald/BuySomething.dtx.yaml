@@ -10,7 +10,7 @@ configuration:
       expr: Password
       type: column
     CVV_Code: '123'
-    APP_Emerald_URL: https://commerce-preview.sbx0032.play.hclsofy.com/Emerald/
+    APP_Emerald_URL: https://commerce-preview.sbx0111.play.hclsofy.com/Emerald/
 steps:
   - open:
       note: Open app1
